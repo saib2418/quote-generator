@@ -3,21 +3,9 @@ const quoteText = document.getElementById("quote");
 const authorText = document.getElementById("author");
 const twitterBtn = document.getElementById("twitter");
 const newQuoteBtn = document.getElementById("new-quote");
-const loader = getElementById("loader");
 
 let apiQuotes = [];
 
-// show loading
-function loading() {
-  loader.hidden = false;
-  quoteContainer.hidden = true;
-}
-
-// hide loading
-function complete() {
-  quoteContainer.hidden = false;
-  loader.hidden = true;
-}
 //Show new quote
 function newQuote() {
   //Pick a random quote for API quotes array
@@ -59,8 +47,8 @@ newQuoteBtn.addEventListener("click", newQuote);
 twitterBtn.addEventListener("click", tweetQuote);
 
 //On load
-// getQuotes();
-loading();
+getQuotes();
+// loading();
 
 //if we used the "quotes.js" file, we can delete all the code in this file (since we aren't
 //fetching naything from an API anymore, its just a bunch of static data)
